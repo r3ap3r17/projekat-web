@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Studenti</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1 class="title">
+            STUDENTI TABELA
+        </h1>
+        <p style="opacity: .5;">potrebno je refreshovati posle svake svakog submita</p>
+    </div>
+    <div class="container">
+        <table id="tableContent">
+            <tr>
+                <th>ID</th>
+                <th>Index</th>
+                <th>Name</th>
+                <th>Surname</th>
+            </tr>
+            <!-- <tr>
+                <td>2345236</td>
+                <td>Nikola</td>
+                <td>Dragojevic</td>
+            </tr>
+            <tr>
+                <td>2345236</td>
+                <td>Stevan</td>
+                <td>Jokic</td>
+            </tr>
+            <tr>
+                <td>2345236</td>
+                <td>Marija</td>
+                <td>Peric</td> -->
+            </tr>
+        </table>
+        <!-- GET Form -->
+        <form id="getOneForm">
+            <h1 class="title">
+                Uneti ID studenta
+            </h1>
+            <div>
+                <input type="text" name="id" id="getOneId">
+                <button id="getOne" type="submit">GET</button>
+            </div>
+            <table id="getOneTable"></table>
+        </form>
+        <div class="form-wrapper">
+            <!-- POST Form -->
+            <form id="createForm">
+                <h1 class="title">
+                    Registruj novog studenta
+                </h1>
+                <div>
+                    <label for="index">Index</label>
+                    <input type="text" name="index">
+                </div>
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" name="name">
+                </div>
+                <div>
+                    <label for="surname">Surname</label>
+                    <input type="text" name="surname">
+                </div>
+                <button id="createStudent" type="submit">SUBMIT</button>
+            </form>
+            <!-- Update form -->
+            <form id="updateForm">
+                <h1 class="title">
+                    Update studenta
+                </h1>
+                <div>
+                    <label for="index">Index</label>
+                    <input type="text" name="index">
+                </div>
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" name="name">
+                </div>
+                <div>
+                    <label for="surname">Surname</label>
+                    <input type="text" name="surname">
+                </div>
+                <div>
+                    <label for="id">ID<span> *only if you are updating</span></label>
+                    <input type="text" name="id" id="idInput">
+                </div>
+                <button id="updateStudent" type="submit">UPDATE</button>
+            </form>
+        </div>
+
+        <!-- DELETE form -->
+        <form id="deleteForm">
+            <h1 class="title" style="margin-bottom: 0;">
+                Uneti ID studenta
+            </h1>
+            <p style="opacity: .5; margin-bottom: 2rem;">Student ce biti obrisan</p>
+            <div>
+                <input type="text" name="id" id="deleteOneId">
+                <button id="deleteOne" type="submit">DELETE</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
